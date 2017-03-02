@@ -6,7 +6,7 @@ import {
   Text
 } from 'react-native';
 import Home from './Home';
-import NaviBar from './NaviBar';
+import * as NaviBar from './Components/Header/NaviBar';
 
 const Navi = ({ route, natigator }) => {
   return (
@@ -20,8 +20,8 @@ const Navi = ({ route, natigator }) => {
       }}
       navigationBar={
         <Navigator.NavigationBar
-          routeMapper={NaviBar}
-          style={{ backgroundColor: '#4D80BF' }}
+          routeMapper={NaviBar.Header}
+          style={NaviBar.HeaderStyle.header}
         />
       }
     />
